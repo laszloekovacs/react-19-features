@@ -3,4 +3,4 @@
 Showcase of new hooks and features of React 19
 
 ## Screenshot
-[![screenshot](screenshot.jpeg)]
+![screenshot](screenshot.jpeg)
