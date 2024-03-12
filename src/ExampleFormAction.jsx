@@ -66,14 +66,22 @@ export const ExampleFormAction = () => {
 				<Submit />
 			</form>
 
-			<ul>
-				{posts.map((post, index) => (
-					<li key={index}>
-						<strong>{post.name}</strong>
-						<p>{post.message}</p>
-					</li>
-				))}
-			</ul>
+			<table className='mb-4 p-4'>
+				<thead>
+					<tr>
+						<th>Username</th>
+						<th>Message</th>
+					</tr>
+				</thead>
+				<tbody>
+					{posts.map((post, index) => (
+						<tr key={index} className='border-b border-b-black'>
+							<td>{post.name}</td>
+							<td>{post.message}</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
 		</div>
 	)
 }

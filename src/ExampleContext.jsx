@@ -20,7 +20,9 @@ const Card = () => {
 	// instead of using `useContext` directly, you can use the `use` function
 	const { theme, toggleTheme } = use(ThemeContext)
 	return (
-		<button onClick={toggleTheme}>
+		<button
+			onClick={toggleTheme}
+			className='border border-1 border-black px-2 py-1'>
 			{theme === 'light' ? 'Switch to Dark' : 'Switch to Light'}
 		</button>
 	)
@@ -29,7 +31,25 @@ const Card = () => {
 export const ExampleContext = () => {
 	return (
 		<ThemeProvider>
-			<Card />
+			<div className='my-4'>
+				<Sample />
+				<Card />
+			</div>
 		</ThemeProvider>
+	)
+}
+
+const Sample = () => {
+	const { theme } = use(ThemeContext)
+
+	const style = theme === 'light' ? 'bg-gray-100' : 'bg-gray-800 text-white'
+
+	return (
+		<div className={'my-4'}>
+			<h1 className='text-2xl'>Context with use()</h1>
+			<div className={'my-4 py-4 ' + style}>
+				<p>example</p>
+			</div>
+		</div>
 	)
 }

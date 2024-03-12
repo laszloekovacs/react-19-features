@@ -14,7 +14,7 @@ const MessageContainer = ({ messagePromise }) => {
 
 	return (
 		<Suspense fallback={<div>Loading...</div>}>
-			<p>{message}</p>
+			<p className='text-orange-500'>{message}</p>
 		</Suspense>
 	)
 }
@@ -32,6 +32,7 @@ export const ExamplePromise = () => {
 
 	return (
 		<div className='my-8'>
+			<h2 className='text-2xl mb-4'>Promise with use() hook</h2>
 			{show ? (
 				<MessageContainer messagePromise={messagePromise} />
 			) : (
