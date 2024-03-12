@@ -1,0 +1,21 @@
+{
+	"name": "react-19-features",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"react": "^0.0.0-experimental-56e20051c-20240311",
+		"react-dom": "^0.0.0-experimental-56e20051c-20240311"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-react-swc": "^3.6.0",
+		"typescript": "^5.2.2",
+		"vite": "^5.1.6"
+	}
+}
