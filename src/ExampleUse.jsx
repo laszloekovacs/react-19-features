@@ -19,8 +19,11 @@ const Joke = () => {
 // Probably an Error boundary should be used here
 export const ExampleUse = () => {
 	return (
-		<Suspense fallback={<p>Loading...</p>}>
-			<Joke />
-		</Suspense>
+		<div className='grid gap-2 pb-8'>
+			<h1 className='text-2xl'>Fetch with use() hook and Suspense</h1>
+			<Suspense fallback={<p className='text-amber-500'>Loading...</p>}>
+				<Joke />
+			</Suspense>
+		</div>
 	)
 }

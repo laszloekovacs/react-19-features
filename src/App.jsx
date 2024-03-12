@@ -4,7 +4,7 @@ import { ExampleUse } from './ExampleUse'
 import { ExampleFormAction } from './ExampleFormAction'
 function App() {
 	return (
-		<div>
+		<div className='p-8'>
 			<ExampleUse />
 			<hr />
 			<ExamplePromise />
@@ -12,6 +12,7 @@ function App() {
 			<ExampleContext />
 			<hr />
 			<ExampleFormAction />
+			<hr />
 		</div>
 	)
 }

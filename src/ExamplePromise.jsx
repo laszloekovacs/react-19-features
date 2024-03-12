@@ -26,13 +26,25 @@ export const ExamplePromise = () => {
 
 	const download = () => {
 		// try passing 'fetchMessage' and 'fetchMessage()'
-		setMessagePromise(fetchMessage)
+		setMessagePromise(fetchMessage())
 		setShow(true)
 	}
 
-	if (show) {
-		return <MessageContainer messagePromise={messagePromise} />
-	} else {
-		return <button onClick={download}>Show Message</button>
-	}
+	return (
+		<div className='my-8'>
+			{show ? (
+				<MessageContainer messagePromise={messagePromise} />
+			) : (
+				<button
+					className='py-1 px-2 border border-1 border-black'
+					onClick={download}>
+					Show Message
+				</button>
+			)}
+
+			<small>
+				<pre>{JSON.stringify({ messagePromise, show }, null, 2)}</pre>
+			</small>
+		</div>
+	)
 }
