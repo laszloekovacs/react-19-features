@@ -44,7 +44,7 @@ export const ExampleFormAction = () => {
 
 	return (
 		<div className='border-2 border-grey-200 p-2'>
-			<h1 className='text-2xl my-4'>Form Aciton, Form Status</h1>
+			<h1 className='text-2xl my-4'>Form Action, Form Status</h1>
 			<div className='flex gap-4'>
 				<form action={postMessage}>
 					<div className='grid mb-4'>
