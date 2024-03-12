@@ -10,7 +10,7 @@ export const ExampleFormState = () => {
 	const [state, formAction] = useFormState(action, 0)
 
 	return (
-		<div>
+		<div className='border-2 border-grey-200 p-2'>
 			<h1 className='text-2xl mb-4'>Form State</h1>
 			<form action={formAction} className='flex gap-2 mb-2'>
 				<input

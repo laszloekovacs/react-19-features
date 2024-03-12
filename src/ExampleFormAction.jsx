@@ -43,45 +43,49 @@ export const ExampleFormAction = () => {
 	}
 
 	return (
-		<div className='max-w-[30ch]'>
-			<h1 className='text-2xl my-4'>Form Aciton, Status</h1>
-			<form action={postMessage}>
-				<div className='grid mb-4'>
-					<label>Username</label>
-					<input
-						name='name'
-						title='user'
-						className='border border-1 p-1 border-gray-700 mt-2'
-					/>
-				</div>
-				<div className='grid'>
-					<label>Message</label>
-					<textarea
-						name='message'
-						title='message'
-						className='border border-1 p-1 border-gray-700 mt-2'
-					/>
-				</div>
+		<div className='border-2 border-grey-200 p-2'>
+			<h1 className='text-2xl my-4'>Form Aciton, Form Status</h1>
+			<div className='flex gap-4'>
+				<form action={postMessage}>
+					<div className='grid mb-4'>
+						<label>Username</label>
+						<input
+							name='name'
+							title='user'
+							className='border border-1 p-1 border-gray-700 mt-2'
+						/>
+					</div>
+					<div className='grid'>
+						<label>Message</label>
+						<textarea
+							name='message'
+							title='message'
+							className='border border-1 p-1 border-gray-700 mt-2'
+						/>
+					</div>
 
-				<Submit />
-			</form>
+					<Submit />
+				</form>
 
-			<table className='mb-4 p-4'>
-				<thead>
-					<tr>
-						<th>Username</th>
-						<th>Message</th>
-					</tr>
-				</thead>
-				<tbody>
-					{posts.map((post, index) => (
-						<tr key={index} className='border-b border-b-black'>
-							<td>{post.name}</td>
-							<td>{post.message}</td>
-						</tr>
-					))}
-				</tbody>
-			</table>
+				<div>
+					<table className='mb-4 p-4'>
+						<thead>
+							<tr>
+								<th>Username</th>
+								<th>Message</th>
+							</tr>
+						</thead>
+						<tbody>
+							{posts.map((post, index) => (
+								<tr key={index} className='border-b border-b-black'>
+									<td>{post.name}</td>
+									<td>{post.message}</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	)
 }

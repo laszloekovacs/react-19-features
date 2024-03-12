@@ -6,15 +6,11 @@ import { ExampleFormState } from './ExampleFormState'
 
 function App() {
 	return (
-		<div className='p-8 grid gap-4'>
+		<div className='p-8 grid grid-cols-2 gap-8'>
 			<ExampleUse />
-			<hr />
 			<ExamplePromise />
-			<hr />
 			<ExampleContext />
-			<hr />
 			<ExampleFormAction />
-			<hr />
 			<ExampleFormState />
 		</div>
 	)

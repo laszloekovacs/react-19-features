@@ -30,12 +30,14 @@ const Card = () => {
 
 export const ExampleContext = () => {
 	return (
-		<ThemeProvider>
-			<div className='my-4'>
-				<Sample />
-				<Card />
-			</div>
-		</ThemeProvider>
+		<div className='border-2 border-grey-200 p-2'>
+			<ThemeProvider>
+				<div className='my-4'>
+					<Sample />
+					<Card />
+				</div>
+			</ThemeProvider>
+		</div>
 	)
 }
 
@@ -47,7 +49,7 @@ const Sample = () => {
 	return (
 		<div className={'my-4'}>
 			<h1 className='text-2xl'>Context with use()</h1>
-			<div className={'my-4 py-4 ' + style}>
+			<div className={'my-4 p-4 ' + style}>
 				<p>example</p>
 			</div>
 		</div>

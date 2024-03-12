@@ -31,7 +31,7 @@ export const ExamplePromise = () => {
 	}
 
 	return (
-		<div className='my-8'>
+		<div className='border-2 border-grey-200 p-2'>
 			<h2 className='text-2xl mb-4'>Promise with use() hook</h2>
 			{show ? (
 				<MessageContainer messagePromise={messagePromise} />
